@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Lecture 7 - Events</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #cbd5f5, #94a3b8);
+    padding:40px;
+    color:#0f172a;
+    line-height:1.6;
+}
+
+header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+header h1{
+    color:#020617;
+    border-bottom:4px solid #1d4ed8;
+    padding-bottom:10px;
+}
+
+header p{
+    margin-top:8px;
+    font-size:18px;
+    color:#1e293b;
+}
+
+h2{
+    color:#1e40af;
+    margin-top:30px;
+    margin-bottom:10px;
+}
+
+h3{
+    margin-top:20px;
+    color:#0f766e;
+}
+
+p{
+    font-size:18px;
+    margin-top:10px;
+}
+
+ul{
+    margin-top:10px;
+    margin-left:25px;
+}
+
+li{
+    margin:6px 0;
+}
+
+.code-box{
+    background:#0f172a;
+    color:#22c55e;
+    padding:18px;
+    border-radius:6px;
+    margin-top:15px;
+    font-size:16px;
+    overflow-x:auto;
+}
+
+a{
+    display:inline-block;
+    margin-top:12px;
+    padding:8px 14px;
+    text-decoration:none;
+    color:white;
+    background-color:#1d4ed8;
+    font-size:18px;
+    border-radius:4px;
+    border:1px solid #1e3a8a;
+    transition:0.3s;
+}
+
+a:hover{
+    background-color:#1e3a8a;
+}
+
+footer{
+    margin-top:50px;
+    padding-top:15px;
+    border-top:2px solid #64748b;
+    text-align:center;
+    font-size:16px;
+    color:#1e293b;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Chapter 7: Events in JavaScript</h1>
+    <p>JavaScript Lecture 7 Notes</p>
+</header>
+
+<h2>Events in JS</h2>
+
+<p>The change in the state of an object is known as an <b>Event</b>.</p>
+
+<p>Events are fired to notify code of <b>"interesting changes"</b>.</p>
+
+<h2>Types of Events</h2>
+
+<ul>
+    <li><b>Mouse Events</b> (click, double click etc.)</li>
+    <li><b>Keyboard Events</b> (keypress, keyup, keydown)</li>
+    <li><b>Form Events</b> (submit etc.)</li>
+    <li><b>Print Event</b> & many more</li>
+</ul>
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Event">Event Reference MDN</a>
+
+<a href="EventInline.html">Inline Event Handling Example</a>
+
+<h2>Event Handling in JS</h2>
+
+<p>Event handling is used to perform actions when an event occurs.</p>
+
+<pre class="code-box">
+node.event = () => {
+//handle here
+}
+
+btn.onclick = () => {
+console.log("btn was clicked");
+}
+</pre>
+
+<a href="EventHandling.html">Event Handling in JS</a>
+
+<h2>Event Object</h2>
+
+<p>It is a special object that has details about the event.</p>
+
+<p>All event handlers have access to the <b>Event Object's</b> properties and methods.</p>
+
+<pre class="code-box">
+node.event = (e) => {
+//handle here
+}
+</pre>
+
+<h3>Common Properties</h3>
+
+<ul>
+    <li><b>e.target</b></li>
+    <li><b>e.type</b></li>
+    <li><b>e.clientX</b></li>
+    <li><b>e.clientY</b></li>
+</ul>
+
+<a href="EventObject.html">Event Object</a>
+
+<h2>Event Listeners</h2>
+
+<p>Event listeners are used to attach multiple event handlers.</p>
+
+<pre class="code-box">
+node.addEventListener( event, callback )
+
+node.removeEventListener( event, callback )
+</pre>
+
+<p><b>Note:</b> callback reference same होना चाहिए remove के लिए</p>
+
+<a href="EventListeners.html">Event Listeners</a>
+
+<h2>Lets Practice</h2>
+
+<p><b>Qs.</b> Create a toggle button for dark/light mode.</p>
+
+<a href="LetsPractice.html">Solution</a>
+<br><br>
+<a href="Homework.html">Homework</a>
+
+<footer>
+    <p>© 2026 JavaScript Lecture 7 | Created by Vikas Pawar</p>
+</footer>
+
+</body>
+</html>
