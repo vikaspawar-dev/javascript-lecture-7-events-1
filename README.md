@@ -6,7 +6,7 @@ This project contains notes and examples for **Events in JavaScript**.
 
 ## 🌐 Live Demo
 
-👉 https://vikaspawar-dev.github.io/javascript-lecture-7-events/
+👉 https://vikaspawar-dev.github.io/javascript-lecture-7-events-1/
 
 ---
 
